@@ -4,21 +4,21 @@ import Books from './Books';
 const booksArr = [
   {
     genre: 'Action',
-    title: 'The Hunger games',
+    title: 'For the love of the game',
     author: 'Sizanne collins',
     progress: '64',
     status: 'Completed',
     chapter: 'Chapter 17',
   }, {
     genre: 'Fiction',
-    title: 'My Life is Magic',
+    title: 'God of War',
     author: 'Kubaho Linne H.',
     progress: '8',
     status: 'Completed',
     chapter: 'Chapter 3: "A Lesson Learned"',
   }, {
     genre: 'Romance',
-    title: 'How I met my heart',
+    title: 'Snow fall',
     author: 'Linne Heaven K.',
     progress: '0',
     status: 'Completed',
