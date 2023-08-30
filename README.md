@@ -84,6 +84,7 @@ Join us in this extraordinary journey where the magic of React breathes life int
 - List existing books and their authors
 - Remove individual books
 - Navigate between different menus
+- Install Redux Toolkit
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
