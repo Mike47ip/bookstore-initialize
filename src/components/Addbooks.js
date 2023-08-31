@@ -1,6 +1,7 @@
 import { React, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/booksSlice';
+import Button from './Buttons';
 import styles from '../Styles/Addbooks.module.css';
 
 function AddBook() {
@@ -36,9 +37,7 @@ function AddBook() {
           className={styles.author}
           onChange={(e) => setAuthor(e.target.value)}
         />
-        <button onClick={handleChange} type="submit" title="Add Book" className={styles.include}>
-          ADD BOOK
-        </button>
+        <Button className={styles.include} onClick={handleChange} title="ADD BOOK" />
       </form>
     </div>
   );
