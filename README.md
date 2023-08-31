@@ -91,7 +91,7 @@ Join us in this extraordinary journey where the magic of React breathes life int
 <!-- LIVE DEMO  -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-- Comming soon
+- Coming soon
 <!-- - Click <a href="https://wacoo.github.io/DEF-CON_Summit/">here</a> to open the live demo. -->
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
