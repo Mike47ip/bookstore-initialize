@@ -3,20 +3,21 @@ import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import PropTypes from 'prop-types';
 import styles from '../Styles/Books.module.css';
+import Button from './Buttons';
 
 function Books({
-  genre, title, author, progress, status, chapter,
+  category, title, id, author, progress, status, chapter, onClick,
 }) {
   return (
     <div className={styles.container}>
       <div className={styles.info}>
-        <p className={styles.genre}>{genre}</p>
-        <p className={styles.title}>{title}</p>
-        <p className={styles.author}>{author}</p>
+        <p className={styles.genre}>{category || 'Uncategorized'}</p>
+        <p className={styles.title}>{title || 'No Title'}</p>
+        <p className={styles.author}>{author || 'Unknown'}</p>
         <div className={styles.actions}>
           <button type="button" className={styles.comment}>Comments</button>
           <span>|</span>
-          <button type="button" className={styles.remove}> Remove </button>
+          <Button type="button" className={styles.remove} id={id} onClick={onClick} title="Remove" />
           <span>|</span>
           <button type="button" className={styles.edit}>Edit</button>
         </div>
@@ -41,21 +42,25 @@ function Books({
 }
 
 Books.defaultProps = {
-  genre: '',
+  category: '',
+  id: '',
   title: '',
   author: '',
   progress: '',
   status: '',
   chapter: '',
+  onClick: '',
 };
 
 Books.propTypes = {
-  genre: PropTypes.string,
+  category: PropTypes.string,
+  id: PropTypes.string,
   title: PropTypes.string,
   author: PropTypes.string,
   progress: PropTypes.string,
   status: PropTypes.string,
   chapter: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 export default Books;
