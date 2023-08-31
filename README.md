@@ -97,7 +97,7 @@ Join us in this extraordinary journey where the magic of React breathes life int
 
 ## 💻 Project Presentation <a name="presentation"></a>
 <!-- - Click <a href="">here</a> to open the presentation. -->
-- Comming soon
+- Coming soon
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- GETTING STARTED -->
 
