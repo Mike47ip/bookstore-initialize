@@ -15,32 +15,28 @@ export const getBooks = createAsyncThunk(
 
 export const postBook = createAsyncThunk(
   'books/postBook',
-  async (book, thunkAPI) => {
+  async (book, { dispatch }) => {
     try {
       await axios.post(baseUrl, book);
-      thunkAPI.dispatch(getBooks());
-      const res = thunkAPI.getState().books;
-      return res;
+      const res = await axios(baseUrl); // Fetch books after posting
+      dispatch(getBooks()); // Dispatch the getBooks action directly
+      return res.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(
-        error?.data?.message || 'Sorry Error Occured!',
-      );
+      return error?.data?.message || 'Sorry, an error occurred!';
     }
   },
 );
 
 export const deleteBookFromApi = createAsyncThunk(
   'books/deleteBookFromApi',
-  async (id, thunkAPI) => {
+  async (id, { dispatch }) => {
     try {
       await axios.delete(`${baseUrl}/${id}`);
-      thunkAPI.dispatch(getBooks());
-      const res = thunkAPI.getState().books;
+      const res = await axios(baseUrl); // Fetch books after deletion
+      dispatch(getBooks()); // Dispatch the getBooks action directly
       return res.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(
-        error?.data?.message || 'Something went wrong!',
-      );
+      return error?.data?.message || 'Something went wrong!';
     }
   },
 );
