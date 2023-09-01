@@ -4,24 +4,31 @@ const initialState = {
   books: [
     {
       itemId: 'item1',
-      title: 'The Great Gatsby',
-      author: 'John Smith',
+      title: 'Matrix',
+      author: 'Wiil Smith',
       category: 'Fiction',
       progress: '84',
     },
     {
       itemId: 'item2',
-      title: 'Anna Karenina',
-      author: 'Leo Tolstoy',
+      title: 'The Avatar',
+      author: 'Kwaku Johnson',
       category: 'Fiction',
       progress: '28',
     },
     {
       itemId: 'item3',
       title: 'The Selfish Gene',
-      author: 'Richard Dawkins',
-      category: 'Nonfiction',
+      author: 'Kwame Atta',
+      category: 'Romance',
       progress: '5',
+    },
+    {
+      itemId: 'item4',
+      title: 'God of War',
+      author: 'Mike Dawkins',
+      category: 'Action',
+      progress: '73',
     },
   ],
 };

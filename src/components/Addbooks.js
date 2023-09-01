@@ -1,22 +1,31 @@
-import { React, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/booksSlice';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
+import { postBook } from '../redux/books/booksSlice';
 import Button from './Buttons';
 import styles from '../Styles/Addbooks.module.css';
 
 function AddBook() {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
-  const bookArr = useSelector((state) => state.book.books);
   const dispatch = useDispatch();
+
+  const category = ['Fiction', 'Action', 'Comedy', 'Adventure', 'Crime', 'Classics', 'Fairy Tale', 'Horror', 'Fantasy', 'Business'];
+  const randomNumber = Math.floor(Math.random() * 10);
+
   const handleChange = (e) => {
-    const id = bookArr.length + 1;
-    dispatch(addBook({
-      itemId: `item${id + 1}`,
+    e.preventDefault();
+
+    const book = {
+      item_id: uuidv4(),
       title,
       author,
-    }));
-    e.preventDefault();
+      category: category[randomNumber],
+    };
+
+    dispatch(postBook(book));
+    setAuthor('');
+    setAuthor('');
   };
 
   return (
