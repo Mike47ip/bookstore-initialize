@@ -46,7 +46,7 @@ Books.defaultProps = {
   id: '',
   title: '',
   author: '',
-  progress: '',
+  progress: '45',
   status: '',
   chapter: '',
   onClick: '',

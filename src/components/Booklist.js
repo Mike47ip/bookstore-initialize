@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import Books from './Books';
 import { getBooks, deleteBookFromApi } from '../redux/books/booksSlice';
+import randomocketGif from '../assests/Rocket.gif';
 
 function BookList() {
   const booksArr = useSelector((state) => state.book.books);
@@ -27,7 +28,13 @@ function BookList() {
 
   if (booksStatus === 'loading') {
     return (
-      <h1 style={{ textAlign: 'center' }}>Loading...</h1>
+      <div style={{
+        display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '50px',
+      }}
+      >
+        {' '}
+        <img src={randomocketGif} alt="Loading" />
+      </div>
     );
   }
 
